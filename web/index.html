@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <!--
+    If you are serving your web app in a path other than the root, change the
+    href value below to reflect the base path you are serving from.
+
+    The path provided below has to start and end with a slash "/" in order for
+    it to work correctly.
+
+    For more details:
+    * https://developer.mozilla.org/en-US/docs/Web/HTML/Element/base
+
+    This is a placeholder for base href that will be replaced by the value of
+    the `--base-href` argument provided to `flutter build`.
+  -->
+  <base href="$FLUTTER_BASE_HREF">
+  <meta name="google-signin-client_id" content="817370875039-27hf6s439nl1a0c105hd81hgnv47uc06.apps.googleusercontent.com">
+
+  <meta charset="UTF-8">
+  <meta content="IE=Edge" http-equiv="X-UA-Compatible">
+  <meta name="description" content="A new Flutter project.">
+
+  <!-- iOS meta tags & icons -->
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="apple-mobile-web-app-title" content="video_conference_app">
+  <link rel="apple-touch-icon" href="icons/Icon-192.png">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="favicon.png"/>
+
+  <title>video_conference_app</title>
+  <link rel="manifest" href="manifest.json">
+  <title>Jitsi Meet Integration</title>
+  <script src='https://meet.jit.si/external_api.js'></script>
+</head>
+<body>
+  <script src="flutter_bootstrap.js" async></script>
+  <script>
+        // Your code to use JitsiMeetExternalAPI
+        var domain = "meet.jit.si";
+        var options = {
+            roomName: "TestRoom",
+            width: 800,
+            height: 600,
+            parentNode: document.querySelector('#meet')
+        };
+        var api = new JitsiMeetExternalAPI(domain, options);
+    </script>
+</body>
+</html>
